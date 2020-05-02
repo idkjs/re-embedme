@@ -9,6 +9,7 @@ type nullOrString2 = Js.null(string);
 [@genType]
 type filenameFromCommentReader = string => Js.Null.t(string);
 
+[@genType]
 module EmbedmeOptions = {
   type t = {
     sourceRoot: string,
@@ -76,7 +77,7 @@ module CommentFamily = {
     | SINGLE_QUOTE => "'"
     | DOUBLE_PERCENT => "%%"
     | DOUBLE_HYPHENS => "--";
-    
+
   let fromString =
     fun
     | "//?=>??" => NONE
