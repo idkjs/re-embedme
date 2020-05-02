@@ -1,0 +1,12 @@
+####{BSB GENERATED: NO EDIT
+B lib/bs
+FLG -open Embedme
+FLG -ppx '/Users/mandalarian/.fnm/node-versions/v13.11.0/installation/lib/node_modules/bs-platform/darwin/bsc.exe -as-ppx '
+S /Users/mandalarian/node_modules/bs-platform/lib/ocaml
+B /Users/mandalarian/node_modules/bs-platform/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /Users/mandalarian/Github/re-embedme/node_modules/@ava/bucklescript/lib/ocaml
+B /Users/mandalarian/Github/re-embedme/node_modules/@ava/bucklescript/lib/ocaml
+S src
+B lib/bs/src
+####BSB GENERATED: NO EDIT}
