@@ -1,6 +1,15 @@
 {
 	"name": "embedme",
-	"version": "0.1.0",
+  "version": "0.1.0",
+  "gentypeconfig": {
+    "language": "typescript",
+    "module": "es6",
+    "importPath": "relative",
+    "debug": {
+      "all": false
+    },
+    "exportInterfaces": true
+  },
 	"sources": [
 		{
 			"dir": "src",

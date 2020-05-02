@@ -1,1 +1,1 @@
-{ "dirs" : [ "test" , "src" , "src/types" ] , "pkgs" : [ [ "bs-platform" , "/Users/mandalarian/node_modules/bs-platform" ] , [ "@ava/bucklescript" , "/Users/mandalarian/Github/re-embedme/node_modules/@ava/bucklescript" ] ] , "generated" : [] }
+{ "dirs" : [ "test" , "src" , "src/types" ] , "pkgs" : [ [ "gentype" , "/Users/mandalarian/Github/re-embedme/node_modules/gentype" ] , [ "bs-platform" , "/Users/mandalarian/node_modules/bs-platform" ] , [ "@ava/bucklescript" , "/Users/mandalarian/Github/re-embedme/node_modules/@ava/bucklescript" ] ] , "generated" : [] }

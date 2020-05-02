@@ -1,1 +1,1 @@
-Js.log("Hello, world!")
+Js.log("Hello, world!");

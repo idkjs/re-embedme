@@ -97,7 +97,6 @@ enum SupportedFileType {
   TYPESCRIPT = 'ts',
   JAVASCRIPT = 'js',
   REASON = 're',
-  REASONREI = 'rei',
   SCSS = 'scss',
   RUST = 'rust',
   JAVA = 'java',
@@ -127,6 +126,7 @@ enum SupportedFileType {
   PROTOBUF = 'proto',
   SQL = 'sql',
   HASKELL = 'hs',
+  ARDUINO = 'ino',
 ```
 
 ### Alternate embedding syntax

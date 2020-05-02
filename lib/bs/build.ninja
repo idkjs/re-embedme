@@ -1,3 +1,4 @@
+gentypeconfig = -bs-gentype /Users/mandalarian/Github/re-embedme/node_modules/gentype/gentype.exe
 g_pkg_flg = -bs-package-name embedme -bs-ns Embedme
 src_root_dir = /Users/mandalarian/Github/re-embedme
 bsc = /Users/mandalarian/.fnm/node-versions/v13.11.0/installation/lib/node_modules/bs-platform/darwin/bsc.exe
@@ -12,18 +13,18 @@ g_lib_incls = -I . -I src -I /Users/mandalarian/Github/re-embedme/node_modules/@
 rule build_ast_from_re
   command = $bsc  $warnings -color always $bsc_flags -o $out -bs-syntax-only -bs-binary-ast $in
   description = [34mBuilding[39m [2m${out}[22m
-build  src/Demo.reast : build_ast_from_re $src_root_dir/src/Demo.re
+build  src/Embeder.reast : build_ast_from_re $src_root_dir/src/Embeder.re
 rule build_deps
-  command = $bsdep -hash dc5f07b8b3a3135b5422fd9fab305ecf $g_ns -g $bsb_dir_group $in
+  command = $bsdep -hash f75f40c097fd04e1a456370fda1ac0fc $g_ns -g $bsb_dir_group $in
   restat = 1
   description = [34mBuilding[39m [2m${out}[22m
-build  src/Demo.d : build_deps src/Demo.reast
+build  src/Embeder.d : build_deps src/Embeder.reast
 rule ml_cmj_cmi
-  command = $bsc $g_pkg_flg -color always -bs-suffix $g_lib_incls $warnings $bsc_flags -o $out $in
+  command = $bsc $g_pkg_flg -color always -bs-suffix $g_lib_incls $warnings $bsc_flags $gentypeconfig -o $out $in
   dyndep = $in_e.d
   restat = 1
   description = [34mBuilding[39m [2m${out}[22m
-build  src/Demo-Embedme.cmj |  src/Demo-Embedme.cmi $src_root_dir/src/Demo.bs.js : ml_cmj_cmi src/Demo.reast ||  src/Demo.d
+build  src/Embeder-Embedme.cmj |  src/Embeder-Embedme.cmi $src_root_dir/src/Embeder.bs.js : ml_cmj_cmi src/Embeder.reast ||  src/Embeder.d
   g_pkg_flg = $g_pkg_flg  -bs-package-output commonjs:src
 rule build_package
   command = $bsc -w -49 -color always -no-alias-deps  $in
